@@ -38,11 +38,10 @@ go run ./example -input words.json -font /path/to/font.ttf -output wordcloud.png
 
 ## 在项目中使用
 
-模块名为 `wordcloud-go`。将本仓库放在任意本地目录，在使用它的项目中添加依赖：
+在使用它的 Go 项目中添加依赖：
 
 ```sh
-go mod edit -require=wordcloud-go@v0.0.0
-go mod edit -replace=wordcloud-go=/path/to/wordcloud-go
+go get github.com/MTW-Team/wordcloud-go@latest
 ```
 
 添加导入后运行 `go mod tidy`。以下函数使用内置字体生成英文词云，并将 PNG 写入 `io.Writer`：
@@ -55,7 +54,7 @@ import (
     "io"
 
     "golang.org/x/image/font/gofont/goregular"
-    wordcloud "wordcloud-go"
+    wordcloud "github.com/MTW-Team/wordcloud-go"
 )
 
 func Render(ctx context.Context, output io.Writer) error {

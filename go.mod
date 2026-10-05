@@ -1,4 +1,4 @@
-module wordcloud-go
+module github.com/MTW-Team/wordcloud-go
 
 go 1.27.1
 

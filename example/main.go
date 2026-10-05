@@ -12,7 +12,7 @@ import (
 
 	"golang.org/x/image/font/gofont/goregular"
 
-	wordcloud "wordcloud-go"
+	wordcloud "github.com/MTW-Team/wordcloud-go"
 )
 
 func main() {
